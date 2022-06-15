@@ -15,17 +15,18 @@ const highlightMenu = () => {
   const aboutMenu = document.querySelector('#about-page');
   const servicesMenu = document.querySelector('#services-page');
   let scrollPos = window.scrollY;
+  //console.log(scrollPos);
 
-  if (window.innerWidth > 960 && scrollPos < 800) {
+  if (window.innerWidth > 960 && scrollPos < 930) {
     homeMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
+  } else if (window.innerWidth > 960 && scrollPos < 1650) {
     aboutMenu.classList.add('highlight');
     homeMenu.classList.remove('highlight');
     servicesMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
+  } else if (window.innerWidth > 960 && scrollPos < 2450) {
     servicesMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
     return;
@@ -42,7 +43,7 @@ window.addEventListener('click', highlightMenu);
 
 const hideMobileMenu = () => {
   const menuBars = document.querySelector('.is-active');
-  if (window.innerWidth <= 768 && menuBars) {
+  if (window.innerWidth <= 1000 && menuBars) {
     menu.classList.toggle('is-active');
     menuLinks.classList.remove('active');
   }
@@ -50,3 +51,20 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+const MenuTest = () => {
+    const menuBars = document.querySelector('.navbar');
+    var CSSbackground = window.getComputedStyle(menuBars,null).getPropertyValue("left");
+    let scrollPos = window.scrollY;
+    console.log(scrollPos);
+
+
+    if (scrollPos < 915) {
+        menuBars.style.background = '';
+    } else if (scrollPos => 915) {
+        menuBars.style.background = '#131313';
+    }
+
+}
+
+window.addEventListener('scroll', MenuTest);
