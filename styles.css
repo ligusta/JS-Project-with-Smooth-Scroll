@@ -45,9 +45,9 @@
 }
 
 .navbar__menu {
-    display: flex;              /* flex позволяет в дальнейшем управлять расположением блоков проще чем обычный css */
-    align-items: center;        /* расположение по вертикали, например внизу, вверху или растянуто, В ДАННОМ СЛУЧАЕ ПО ЦЕНТРУ БЕЗ РАСТЯЖКИ */
-    list-style: none;           /* стиль списка отсутствует, можно было задавать различные стили, цифры, картинки, точки для пунктов и тд. */
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 .navbar__item {
@@ -56,8 +56,8 @@
 
 .navbar__links {
     color: #fff;
-    display: flex;              /* flex позволяет в дальнейшем управлять расположением блоков проще чем обычный css */
-    align-items: center;        /* расположение по вертикали, например внизу, вверху или растянуто, В ДАННОМ СЛУЧАЕ ПО ЦЕНТРУ БЕЗ РАСТЯЖКИ */
+    display: flex;
+    align-items: center;
     justify-content: center;
     width: 125px;
     text-decoration: none;
